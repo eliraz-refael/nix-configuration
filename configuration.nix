@@ -12,6 +12,13 @@
       ./hardware-configuration.nix
     ];
 
+  nix = {
+    package = pkgs.nixFlakes; # or versioned attributes like nixVersions.nix_2_8
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -132,6 +139,7 @@
     nodejs
     nodePackages.npm
     unzip
+    google-chrome
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
