@@ -16,6 +16,9 @@ in
 
       zsh = {
         enable = true;
+        enableAutosuggestions = true;
+        enableCompletion = true;
+        enableSyntaxHighlighting = true;
         shellAliases = {
           ll = "ls -l";
           update = "sudo nixos-rebuild switch";
@@ -34,6 +37,12 @@ in
         enable = true;
         userName  = "Eliraz Kedmi";
         userEmail = "eliraz.kedmi@fundguard.com";
+      };
+
+      zoxide = {
+        enable = true;
+        enableBashIntegration = true;
+        enableZshIntegration = true;
       };
     };
   };

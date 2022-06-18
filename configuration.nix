@@ -12,6 +12,7 @@
       ./hardware-configuration.nix
       ./networking.nix
       ./services.nix
+      ./time.nix
       ./home.nix
       ./users.nix
       ./environment.nix

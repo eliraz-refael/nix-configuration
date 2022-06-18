@@ -33,6 +33,7 @@
     nodePackages.npm
     unzip
     google-chrome
+    sqlite
   ];
 
 }
