@@ -23,7 +23,7 @@
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -36,4 +36,14 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
+
+  hardware.nvidia.prime = {
+    amdgpuBusId = pkgs.lib.mkOverride 0 "PCI:6:0:0";
+  };
+
+  hardware.bluetooth.enable = true;
+  hardware.pulseaudio.enable = false;
+  hardware.opengl.enable = true;
+  hardware.nvidia.modesetting.enable = true;
+
 }
