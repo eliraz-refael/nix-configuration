@@ -22,6 +22,10 @@ in
         shellAliases = {
           ll = "ls -l";
           update = "sudo nixos-rebuild switch";
+          upgrade = "sudo nixos-rebuild switch --upgrade";
+          emacs-upgrade = "~/.emacs.d/bin/doom upgrade";
+          emacs-sync = "~/.emacs.d/bin/doom sync";
+          emacs-restart = "systemctl restart --user emacs";
         };
         history = {
           size = 10000;
@@ -44,6 +48,37 @@ in
         enableBashIntegration = true;
         enableZshIntegration = true;
       };
+
+      direnv = {
+        enable = true;
+        enableZshIntegration = true;
+        nix-direnv = {
+          enable = true;
+        };
+      };
+
+      ssh = {
+        enable = true;
+        matchBlocks = {
+          "ssh.dev.azure.com" = {
+            extraOptions = {
+              "HostkeyAlgorithms"  = "+ssh-rsa";
+              "PubkeyAcceptedAlgorithms" = "+ssh-rsa";
+              "User" = "git";
+            };
+          };
+        };
+      };
+
+      starship = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
+      topgrade = {
+        enable = true;
+      };
+
     };
   };
 }
