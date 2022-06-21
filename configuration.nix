@@ -11,6 +11,7 @@
       ./boot.nix
       ./hardware-configuration.nix
       ./networking.nix
+      ./virtualisation.nix
       ./services.nix
       ./time.nix
       ./home.nix

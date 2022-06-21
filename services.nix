@@ -25,10 +25,10 @@
       enable = true;
       displayManager = {
         gdm.enable = true;
-        defaultSession = "xfce";
+        defaultSession = "none+leftwm";
       };
       desktopManager = {
-        xfce = {
+        gnome = {
           enable = true;
         };
       };
