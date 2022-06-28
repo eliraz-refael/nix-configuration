@@ -12,9 +12,9 @@
     autorandr
     bitwarden
     bitwarden-cli
-    conky
-    clojure
     clj-kondo
+    clojure
+    conky
     dmenu
     emacs
     fd
@@ -24,6 +24,7 @@
     fzf
     git
     google-chrome
+    ispell
     kitty
     libxkbcommon
     nitrogen
@@ -36,7 +37,6 @@
     signal-desktop
     sqlite
     unzip
-    ispell
     vim
     wget
     yarn
