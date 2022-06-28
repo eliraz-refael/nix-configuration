@@ -6,7 +6,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       <nixos-hardware/asus/zephyrus/ga503>
       ./boot.nix
       ./hardware-configuration.nix
@@ -54,6 +54,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  system.autoUpgrade.enable = true;
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leavecatenate(variables, "bootdev", bootdev)

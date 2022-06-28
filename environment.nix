@@ -13,6 +13,8 @@
     bitwarden
     bitwarden-cli
     conky
+    clojure
+    clj-kondo
     dmenu
     emacs
     fd
@@ -25,12 +27,8 @@
     kitty
     libxkbcommon
     nitrogen
-    nodePackages.npm
     nodePackages.npm-check-updates
-    nodePackages.typescript
-    nodePackages.typescript-language-server
     nodejs-18_x
-    openssl
     picom
     polybar
     ripgrep
@@ -38,6 +36,7 @@
     signal-desktop
     sqlite
     unzip
+    ispell
     vim
     wget
     yarn

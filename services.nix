@@ -6,7 +6,11 @@
     blueman.enable = true;
 
     # Enable CUPS to print documents.
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = [pkgs.hplip];
+    };
+    avahi.enable = true;
 
     pipewire = {
       enable = true;
@@ -31,6 +35,13 @@
         gnome = {
           enable = true;
         };
+      };
+      libinput.enable = true;
+      libinput.touchpad = {
+        tapping = false;
+        tappingDragLock = false;
+        accelProfile = "flat";
+        disableWhileTyping = true;
       };
       windowManager.i3.enable = true;
       windowManager.leftwm.enable = true;

@@ -43,6 +43,15 @@ in
         userEmail = "eliraz.kedmi@fundguard.com";
       };
 
+      broot = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
+      nnn = {
+        enable = true;
+      };
+
       zoxide = {
         enable = true;
         enableBashIntegration = true;
