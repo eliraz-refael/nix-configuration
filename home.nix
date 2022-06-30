@@ -8,11 +8,15 @@ in
   ];
 
   home-manager.users.eliraz = {
+    home.pointerCursor.package = pkgs.vanilla-dmz;
+    home.pointerCursor.name = "Vanilla-DMZ";
+
     programs = {
 
       home-manager = {
         enable = true;
       };
+
 
       zsh = {
         enable = true;
@@ -26,6 +30,8 @@ in
           emacs-upgrade = "~/.emacs.d/bin/doom upgrade";
           emacs-sync = "~/.emacs.d/bin/doom sync";
           emacs-restart = "systemctl restart --user emacs";
+          cat = "bat";
+          ls = "exa -l --icons";
         };
         history = {
           size = 10000;
@@ -37,6 +43,10 @@ in
         };
       };
 
+      exa = {
+        enable = true;
+      };
+
       git = {
         enable = true;
         userName  = "Eliraz Kedmi";
@@ -46,6 +56,10 @@ in
       broot = {
         enable = true;
         enableZshIntegration = true;
+      };
+
+      bat = {
+        enable = true;
       };
 
       nnn = {

@@ -36,17 +36,31 @@
           enable = true;
         };
       };
-      libinput.enable = true;
-      libinput.touchpad = {
-        tapping = false;
-        tappingDragLock = false;
-        accelProfile = "flat";
-        disableWhileTyping = true;
+      synaptics = {
+        enable = true;
+        vertTwoFingerScroll = true;
       };
-      windowManager.i3.enable = true;
-      windowManager.leftwm.enable = true;
+      # libinput.touchpad = {
+      #   tapping = false;
+      #   tappingDragLock = false;
+      #   accelProfile = "flat";
+      #   disableWhileTyping = true;
+      # };
+      windowManager = {
+        leftwm.enable = true;
+        xmonad = {
+          enable = true;
+          enableContribAndExtras = true;
+          extraPackages = haskellPackages: [
+            haskellPackages.dbus
+            haskellPackages.List
+            haskellPackages.monad-logger
+            haskellPackages.xmonad
+          ];
+        };
+      };
+      libinput.enable = false;
       layout = "us,il";
-      xkbVariant = "";
       xkbOptions = "grp:alt_shift_toggle";
     };
 

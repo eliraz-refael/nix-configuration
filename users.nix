@@ -6,7 +6,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Eliraz Kedmi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "lxd" ];
   };
 
 }

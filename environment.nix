@@ -16,7 +16,7 @@
     clojure
     conky
     dmenu
-    emacs
+    ( emacs.override { nativeComp = true; } )
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
