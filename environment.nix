@@ -7,6 +7,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    ( emacs.override { nativeComp = true; } )
     alacritty
     arandr
     autorandr
@@ -16,7 +17,6 @@
     clojure
     conky
     dmenu
-    ( emacs.override { nativeComp = true; } )
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
@@ -24,6 +24,7 @@
     fzf
     git
     google-chrome
+    i3lock
     ispell
     kitty
     libxkbcommon
@@ -34,6 +35,7 @@
     polybar
     ripgrep
     rofi
+    sublime4
     signal-desktop
     sqlite
     unzip
