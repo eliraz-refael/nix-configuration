@@ -10,7 +10,8 @@
       enable = true;
       drivers = [pkgs.hplip];
     };
-    avahi.enable = true;
+
+   avahi.enable = true;
 
     pipewire = {
       enable = true;
@@ -36,10 +37,11 @@
           enable = true;
         };
       };
-      synaptics = {
-        enable = true;
-        vertTwoFingerScroll = true;
-      };
+      # libinput.enable = false;
+      # synaptics = {
+      #   enable = true;
+      #   vertTwoFingerScroll = true;
+      # };
       # libinput.touchpad = {
       #   tapping = false;
       #   tappingDragLock = false;
@@ -59,7 +61,6 @@
           ];
         };
       };
-      libinput.enable = false;
       layout = "us,il";
       xkbOptions = "grp:alt_shift_toggle";
     };

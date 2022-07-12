@@ -4,6 +4,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  environment.sessionVariables = {
+      PATH = ["/home/eliraz/.cargo/bin"];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -11,6 +15,8 @@
     alacritty
     arandr
     autorandr
+    microsoft-edge
+    beancount
     bitwarden
     bitwarden-cli
     clj-kondo
@@ -25,19 +31,21 @@
     git
     google-chrome
     i3lock
+    imagemagick
     ispell
     kitty
     libxkbcommon
     nitrogen
     nodePackages.npm-check-updates
     nodejs-18_x
+    pcmanfm
     picom
     polybar
     ripgrep
     rofi
-    sublime4
     signal-desktop
     sqlite
+    sublime4
     unzip
     vim
     wget
