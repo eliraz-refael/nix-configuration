@@ -25,6 +25,7 @@ in
         enableSyntaxHighlighting = true;
         shellAliases = {
           ll = "ls -l";
+          screenshot = "import png:- | xclip -selection clipboard -t image/png";
           update = "sudo nixos-rebuild switch";
           upgrade = "sudo nixos-rebuild switch --upgrade";
           emacs-upgrade = "~/.emacs.d/bin/doom upgrade";
@@ -51,6 +52,10 @@ in
         enable = true;
         userName  = "Eliraz Kedmi";
         userEmail = "eliraz.kedmi@fundguard.com";
+      };
+
+      java = {
+        enable = true;
       };
 
       broot = {

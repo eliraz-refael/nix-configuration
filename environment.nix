@@ -49,6 +49,7 @@
     unzip
     vim
     wget
+    xclip
     yarn
   ];
 

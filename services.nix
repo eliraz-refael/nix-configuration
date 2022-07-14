@@ -38,9 +38,9 @@
         };
       };
       # libinput.enable = false;
-      # synaptics = {
-      #   enable = true;
-      #   vertTwoFingerScroll = true;
+      synaptics = {
+        enable = true;
+        vertTwoFingerScroll = true;
       # };
       # libinput.touchpad = {
       #   tapping = false;
