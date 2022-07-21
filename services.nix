@@ -11,7 +11,7 @@
       drivers = [pkgs.hplip];
     };
 
-   avahi.enable = true;
+    avahi.enable = true;
 
     pipewire = {
       enable = true;
@@ -38,9 +38,9 @@
         };
       };
       # libinput.enable = false;
-      synaptics = {
-        enable = true;
-        vertTwoFingerScroll = true;
+      # synaptics = {
+      #   enable = true;
+      #   vertTwoFingerScroll = true;
       # };
       # libinput.touchpad = {
       #   tapping = false;

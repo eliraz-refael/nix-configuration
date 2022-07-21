@@ -15,7 +15,6 @@
     alacritty
     arandr
     autorandr
-    microsoft-edge
     beancount
     bitwarden
     bitwarden-cli
@@ -34,7 +33,9 @@
     imagemagick
     ispell
     kitty
+    ledger
     libxkbcommon
+    microsoft-edge
     nitrogen
     nodePackages.npm-check-updates
     nodejs-18_x
