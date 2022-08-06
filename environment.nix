@@ -5,7 +5,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
-      PATH = ["/home/eliraz/.cargo/bin"];
+      PATH = ["~/.cargo/bin" "~/.npm-packages/bin" ""];
+      NODE_PATH = ["~/.npm-packages/lib/node_modules"];
   };
 
   # List packages installed in system profile. To search, run:
@@ -20,8 +21,12 @@
     bitwarden-cli
     clj-kondo
     clojure
+    clojure-lsp
+    cmake
     conky
     dmenu
+    editorconfig-core-c
+    elixir
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
@@ -44,6 +49,7 @@
     polybar
     ripgrep
     rofi
+    shellcheck
     signal-desktop
     sqlite
     sublime4
