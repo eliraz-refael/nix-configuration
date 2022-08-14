@@ -26,6 +26,10 @@
       #media-session.enable = true;
     };
 
+    postgresql = {
+      enable = true;
+    };
+
     xserver = {
       enable = true;
       displayManager = {
@@ -37,13 +41,8 @@
           enable = true;
         };
       };
-      # libinput.enable = false;
-      # synaptics = {
-      #   enable = true;
-      #   vertTwoFingerScroll = true;
-      # };
+      # libinput.enable = true;
       # libinput.touchpad = {
-      #   tapping = false;
       #   tappingDragLock = false;
       #   accelProfile = "flat";
       #   disableWhileTyping = true;

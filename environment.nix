@@ -27,6 +27,7 @@
     dmenu
     editorconfig-core-c
     elixir
+    elixir_ls
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
@@ -42,7 +43,6 @@
     libxkbcommon
     microsoft-edge
     nitrogen
-    nodePackages.npm-check-updates
     nodejs-18_x
     pcmanfm
     picom
