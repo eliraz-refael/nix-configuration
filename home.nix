@@ -17,6 +17,20 @@ in
         enable = true;
       };
 
+      fish = {
+        enable = true;
+        shellAliases = {
+          ll = "ls -l";
+          screenshot = "import png:- | xclip -selection clipboard -t image/png";
+          update = "sudo nixos-rebuild switch";
+          upgrade = "sudo nixos-rebuild switch --upgrade";
+          emacs-upgrade = "~/.emacs.d/bin/doom upgrade";
+          emacs-sync = "~/.emacs.d/bin/doom sync";
+          emacs-restart = "systemctl restart --user emacs";
+          cat = "bat";
+          ls = "exa -l --icons";
+        };
+      };
 
       zsh = {
         enable = true;
@@ -75,6 +89,7 @@ in
         enable = true;
         enableBashIntegration = true;
         enableZshIntegration = true;
+        enableFishIntegration = true;
       };
 
       direnv = {
@@ -101,6 +116,7 @@ in
       starship = {
         enable = true;
         enableZshIntegration = true;
+        enableFishIntegration = true;
       };
 
       topgrade = {

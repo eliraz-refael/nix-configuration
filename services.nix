@@ -11,7 +11,10 @@
       drivers = [pkgs.hplip];
     };
 
-    avahi.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns = true;
+    };
 
     pipewire = {
       enable = true;
@@ -41,12 +44,12 @@
           enable = true;
         };
       };
-      # libinput.enable = true;
-      # libinput.touchpad = {
-      #   tappingDragLock = false;
-      #   accelProfile = "flat";
-      #   disableWhileTyping = true;
-      # };
+      libinput.enable = true;
+      libinput.touchpad = {
+        tappingDragLock = false;
+        accelProfile = "flat";
+        disableWhileTyping = true;
+      };
       windowManager = {
         leftwm.enable = true;
         xmonad = {

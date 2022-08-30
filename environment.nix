@@ -25,6 +25,7 @@
     cmake
     conky
     dmenu
+    deno
     editorconfig-core-c
     elixir
     elixir_ls
