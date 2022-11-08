@@ -7,6 +7,7 @@
   environment.sessionVariables = {
       PATH = ["~/.cargo/bin" "~/.npm-packages/bin" ""];
       NODE_PATH = ["~/.npm-packages/lib/node_modules"];
+      LSP_USE_PLISTS = ["true"];
   };
 
   # List packages installed in system profile. To search, run:
@@ -26,6 +27,7 @@
     conky
     dmenu
     deno
+    dosbox
     editorconfig-core-c
     elixir
     elixir_ls
@@ -38,6 +40,7 @@
     google-chrome
     i3lock
     imagemagick
+    slack
     ispell
     kitty
     ledger

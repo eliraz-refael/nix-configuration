@@ -18,6 +18,7 @@
       ./users.nix
       ./environment.nix
       ./fonts.nix
+      ./falcon.nix
     ];
 
   nix = {
