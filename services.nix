@@ -37,13 +37,14 @@
       enable = true;
       displayManager = {
         gdm.enable = true;
-        defaultSession = "none+leftwm";
+        defaultSession = "none+xmonad";
       };
       desktopManager = {
         gnome = {
           enable = true;
         };
       };
+
       libinput.enable = true;
       libinput.touchpad = {
         tappingDragLock = false;
@@ -60,6 +61,8 @@
             haskellPackages.List
             haskellPackages.monad-logger
             haskellPackages.xmonad
+            haskellPackages.xmobar
+            haskellPackages.lsp
           ];
         };
       };

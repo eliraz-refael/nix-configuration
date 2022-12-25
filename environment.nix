@@ -57,10 +57,12 @@
     signal-desktop
     sqlite
     sublime4
+    texlive.combined.scheme-full
     unzip
     vim
     wget
     xclip
+    xmobar
     yarn
   ];
 
