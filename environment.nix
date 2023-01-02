@@ -25,11 +25,11 @@
     clojure-lsp
     cmake
     conky
-    dmenu
     deno
+    dmenu
     dosbox
     editorconfig-core-c
-    elixir
+    elixir_1_14
     elixir_ls
     fd
     feh
@@ -40,7 +40,7 @@
     google-chrome
     i3lock
     imagemagick
-    slack
+    inotify-tools
     ispell
     kitty
     ledger
@@ -55,6 +55,7 @@
     rofi
     shellcheck
     signal-desktop
+    slack
     sqlite
     sublime4
     texlive.combined.scheme-full
@@ -64,6 +65,8 @@
     xclip
     xmobar
     yarn
+    zip
+    zoom-us
   ];
 
 }

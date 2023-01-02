@@ -31,7 +31,6 @@ in
           ls = "exa -l --icons";
         };
       };
-
       zsh = {
         enable = true;
         enableAutosuggestions = true;
