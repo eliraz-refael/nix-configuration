@@ -1,8 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+  powerManagement.cpuFreqGovernor = "performance";
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [ "processor.ignore_ppc=1" ];
     loader = {
       systemd-boot = {
         enable = true;

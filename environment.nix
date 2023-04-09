@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
-
-{
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -30,7 +31,7 @@
     dosbox
     editorconfig-core-c
     elixir_1_14
-    elixir_ls
+    unstable.elixir-ls
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
