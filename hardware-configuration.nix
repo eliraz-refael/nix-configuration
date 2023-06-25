@@ -46,6 +46,7 @@
   hardware.bluetooth.enable = true;
   hardware.pulseaudio.enable = false;
   hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
   hardware.nvidia.modesetting.enable = true;
 
 }

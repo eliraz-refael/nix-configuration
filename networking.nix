@@ -11,4 +11,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.extraHosts =
+    ''
+    127.0.0.1 fg-kafka-kafka-0.fg-kafka-kafka-brokers.kafka.svc
+  '';
+
 }

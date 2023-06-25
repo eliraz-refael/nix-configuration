@@ -5,6 +5,10 @@ in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+      "electron-20.3.11"
+  ];
+
   environment.sessionVariables = {
       PATH = ["~/.cargo/bin" "~/.npm-packages/bin" ""];
       NODE_PATH = ["~/.npm-packages/lib/node_modules"];
@@ -45,6 +49,7 @@ in {
     ispell
     kitty
     ledger
+    logseq
     libxkbcommon
     microsoft-edge
     nitrogen
@@ -57,6 +62,7 @@ in {
     shellcheck
     signal-desktop
     slack
+    steam
     sqlite
     sublime4
     texlive.combined.scheme-full
