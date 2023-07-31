@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
 in
 {
   imports = [
@@ -10,7 +10,7 @@ in
   home-manager.users.eliraz = {
     home.pointerCursor.package = pkgs.vanilla-dmz;
     home.pointerCursor.name = "Vanilla-DMZ";
-    home.stateVersion = "22.11";
+    home.stateVersion = "23.05";
 
     programs = {
 

@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
+
+
   networking.hostName = "eliraz-nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -10,6 +12,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
   networking.extraHosts =
     ''

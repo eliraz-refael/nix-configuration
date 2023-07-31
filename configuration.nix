@@ -21,6 +21,10 @@
       ./falcon.nix
     ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1u"
+  ];
+
   nix = {
     package = pkgs.nixFlakes; # or versioned attributes like nixVersions.nix_2_8
     extraOptions = ''
@@ -31,7 +35,10 @@
   # Enable sound with pipewire.
   sound.enable = true;
   security.rtkit.enable = true;
-
+  security.pki.certificateFiles = [
+    "/cert/ns.pem"
+    "/cert/ns2.pem"
+  ];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

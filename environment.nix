@@ -15,10 +15,12 @@ in {
       LSP_USE_PLISTS = ["true"];
   };
 
+  programs.fish.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ( emacs.override { nativeComp = true; } )
+    ( emacs.override { withNativeCompilation = true; } )
     alacritty
     arandr
     autorandr
@@ -34,7 +36,7 @@ in {
     dmenu
     dosbox
     editorconfig-core-c
-    elixir_1_14
+    elixir_1_15
     unstable.elixir-ls
     fd
     feh
@@ -53,7 +55,7 @@ in {
     libxkbcommon
     microsoft-edge
     nitrogen
-    nodejs-18_x
+    nodejs_20
     pcmanfm
     picom
     polybar

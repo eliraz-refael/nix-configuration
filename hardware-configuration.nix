@@ -36,8 +36,6 @@
   # networking.interfaces.wlp4s0.useDHCP = lib.mkDefault true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  # high-resolution display
-  hardware.video.hidpi.enable = lib.mkDefault true;
 
   hardware.nvidia.prime = {
     amdgpuBusId = pkgs.lib.mkOverride 0 "PCI:6:0:0";

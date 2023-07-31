@@ -8,5 +8,4 @@
     description = "Eliraz Kedmi";
     extraGroups = [ "networkmanager" "wheel" "lxd" ];
   };
-  users.extraGroups.vboxusers.members = [ "eliraz" ];
 }
