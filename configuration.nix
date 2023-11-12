@@ -23,6 +23,10 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1u"
+    "openssl-1.1.1v"
+    "electron-20.3.11"
+    "openssl-1.1.1w"
+    "electron-24.8.6"
   ];
 
   nix = {
@@ -30,6 +34,10 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+    settings = {
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    };
   };
 
   # Enable sound with pipewire.

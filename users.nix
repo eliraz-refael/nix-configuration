@@ -6,6 +6,6 @@
     shell = pkgs.fish;
     isNormalUser = true;
     description = "Eliraz Kedmi";
-    extraGroups = [ "networkmanager" "wheel" "lxd" ];
+    extraGroups = [ "networkmanager" "wheel" "lxd" "doker" ];
   };
 }

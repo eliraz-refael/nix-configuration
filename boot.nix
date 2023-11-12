@@ -3,7 +3,7 @@
 {
   powerManagement.cpuFreqGovernor = "performance";
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_5;
     kernelParams = [ "processor.ignore_ppc=1" ];
     loader = {
       systemd-boot = {

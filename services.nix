@@ -36,7 +36,10 @@
     xserver = {
       enable = true;
       displayManager = {
-        gdm.enable = true;
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
         defaultSession = "none+xmonad";
       };
       desktopManager = {
