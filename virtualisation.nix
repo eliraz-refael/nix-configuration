@@ -2,7 +2,8 @@
 
 {
   virtualisation = {
-    lxd.enable = true;
-    docker.enable = true;
+    lxd = {
+      enable = true;
+    };
   };
 }

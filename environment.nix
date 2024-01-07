@@ -23,7 +23,6 @@ in {
     hyprland = {
       enable = true;
       package = hyprland-flake.packages.${pkgs.system}.hyprland;
-      nvidiaPatches = true;
     };
   };
 
@@ -31,6 +30,7 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ( emacs29.override { withNativeCompilation = true; } )
+    anydesk
     alacritty
     arandr
     autorandr
@@ -46,7 +46,7 @@ in {
     dmenu
     dosbox
     editorconfig-core-c
-    elixir_1_15
+    unstable.elixir_1_16
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
@@ -79,10 +79,11 @@ in {
     steam
     sublime4
     texlive.combined.scheme-full
+    opera
     unstable.elixir-ls
     unstable.qutebrowser
+    unstable.neovim
     unzip
-    vim
     waybar
     wget
     xclip

@@ -27,6 +27,7 @@
     "electron-20.3.11"
     "openssl-1.1.1w"
     "electron-24.8.6"
+    "electron-25.9.0"
   ];
 
   nix = {

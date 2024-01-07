@@ -2,7 +2,7 @@
 
 {
     fonts.fontconfig.antialias = true;
-    fonts.fonts = with pkgs; [
+    fonts.packages = with pkgs; [
         anonymousPro
         culmus
         fantasque-sans-mono

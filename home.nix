@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
 in
 {
   imports = [
@@ -10,7 +10,7 @@ in
   home-manager.users.eliraz = {
     home.pointerCursor.package = pkgs.vanilla-dmz;
     home.pointerCursor.name = "Vanilla-DMZ";
-    home.stateVersion = "23.05";
+    home.stateVersion = "23.11";
 
     programs = {
 
@@ -30,13 +30,14 @@ in
           emacs-restart = "systemctl restart --user emacs";
           cat = "bat";
           ls = "exa -l --icons";
+          vim = "nvim";
         };
       };
       zsh = {
         enable = true;
         enableAutosuggestions = true;
         enableCompletion = true;
-        enableSyntaxHighlighting = true;
+        syntaxHighlighting.enable = true;
         shellAliases = {
           ll = "ls -l";
           screenshot = "import png:- | xclip -selection clipboard -t image/png";
@@ -47,6 +48,7 @@ in
           emacs-restart = "systemctl restart --user emacs";
           cat = "bat";
           ls = "exa -l --icons";
+          vim = "nvim";
         };
         history = {
           size = 10000;
@@ -58,7 +60,7 @@ in
         };
       };
 
-      exa = {
+      eza = {
         enable = true;
       };
 
