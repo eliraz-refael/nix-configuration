@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, libclang, ... }:
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
   flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
@@ -30,13 +30,14 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ( emacs29.override { withNativeCompilation = true; } )
-    anydesk
     alacritty
+    anydesk
     arandr
     autorandr
     beancount
     bitwarden
     bitwarden-cli
+    cargo
     clj-kondo
     clojure
     clojure-lsp
@@ -45,8 +46,9 @@ in {
     deno
     dmenu
     dosbox
+    dunst
     editorconfig-core-c
-    unstable.elixir_1_16
+    elixir
     fd
     feh
     ffmpeg_5  # Firefox codec for playing audio from places like Tidal
@@ -66,12 +68,15 @@ in {
     microsoft-edge
     nitrogen
     nodejs_20
+    opera
     pcmanfm
     picom
+    pkg-config
     polybar
+    ranger
     ripgrep
     rofi
-    wofi
+    rust-analyzer
     shellcheck
     signal-desktop
     slack
@@ -79,13 +84,16 @@ in {
     steam
     sublime4
     texlive.combined.scheme-full
-    opera
+    unstable.bun
+    unstable.bruno
     unstable.elixir-ls
-    unstable.qutebrowser
     unstable.neovim
+    unstable.qutebrowser
+    unstable.rustc
     unzip
     waybar
     wget
+    wofi
     xclip
     xmobar
     yarn

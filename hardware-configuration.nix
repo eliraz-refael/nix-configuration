@@ -37,14 +37,23 @@
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  hardware.nvidia.prime = {
-    amdgpuBusId = pkgs.lib.mkOverride 0 "PCI:6:0:0";
+  hardware.nvidia = {
+    open = false;
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    nvidiaSettings = true;
+    prime = {
+      amdgpuBusId = pkgs.lib.mkOverride 0 "PCI:6:0:0";
+    };
+  };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 
   hardware.bluetooth.enable = true;
   hardware.pulseaudio.enable = false;
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
-  hardware.nvidia.modesetting.enable = true;
 
 }

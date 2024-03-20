@@ -56,6 +56,7 @@
       };
       windowManager = {
         leftwm.enable = true;
+        qtile.enable = true;
         xmonad = {
           enable = true;
           enableContribAndExtras = true;
