@@ -31,7 +31,6 @@ in {
   environment.systemPackages = with pkgs; [
     ( emacs29.override { withNativeCompilation = true; } )
     alacritty
-    anydesk
     arandr
     autorandr
     beancount
