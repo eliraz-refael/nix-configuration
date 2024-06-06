@@ -14,6 +14,7 @@ in {
       LSP_USE_PLISTS = ["true"];
       WLR_NO_HARDWARE_CURSORS=["1"];
       MOZ_ENABLE_WAYLAND=["1"];
+      UV_USE_IO_URING=["0"]; # temporary fix for yarn not able to install stuff due to issue with uring
       # WLR_DRM_DEVICES=["/dev/dri/card1"]; # start hyprland on nvidia, to start on intel, comment this line out.
   };
 
@@ -64,6 +65,7 @@ in {
     cmake
     conky
     deno
+    devbox
     dmenu
     dosbox
     dunst
@@ -103,7 +105,6 @@ in {
     rofi
     rust-analyzer
     shellcheck
-    signal-desktop
     slack
     sqlite
     slurp
@@ -118,6 +119,8 @@ in {
     unstable.neovim
     unstable.qutebrowser
     unstable.rustc
+    unstable.signal-desktop
+    unstable.yarn
     unzip
     waybar
     waypaper
@@ -128,7 +131,6 @@ in {
     xclip
     # xmobar
     xwayland
-    yarn
     zip
     zoom-us
   ];

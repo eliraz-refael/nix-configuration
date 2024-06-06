@@ -2,23 +2,10 @@
 
 {
   services.system76-scheduler.enable = true;
+  services.power-profiles-daemon.enable = true;
   security.rtkit.enable = true;
   sound.enable = true;
   services = {
-    auto-cpufreq.enable = true;
-    auto-cpufreq.settings = {
-      battery = {
-        governor = "powersave";
-        turbo = "never";
-      };
-      charger = {
-        governor = "performance";
-        turbo = "auto";
-      };
-    };
-    thermald.enable = true;
-
-#    blueman.enable = true;
 
     # Enable CUPS to print documents.
     printing = {
@@ -43,6 +30,8 @@
       enable = true;
     };
 
+    displayManager.defaultSession = "hyprland";
+    libinput.enable = true;
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
@@ -51,14 +40,12 @@
           enable = true;
           wayland = true;
         };
-        defaultSession = "none+qtile";
       };
       desktopManager = {
         gnome = {
           enable = true;
         };
       };
-      libinput.enable = true;
       windowManager = {
         qtile = {
           enable = true;
@@ -68,8 +55,10 @@
           ];
         };
       };
-      layout = "us,il";
-      xkbOptions = "grp:alt_shift_toggle";
+      xkb = {
+        layout = "us,il";
+        options = "grp:alt_shift_toggle";
+      };
     };
 
   };

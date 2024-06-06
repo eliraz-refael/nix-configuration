@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
 in
 {
   imports = [
@@ -10,7 +10,7 @@ in
   home-manager.users.eliraz = {
     home.pointerCursor.package = pkgs.vanilla-dmz;
     home.pointerCursor.name = "Vanilla-DMZ";
-    home.stateVersion = "23.11";
+    home.stateVersion = "24.05";
 
     programs = {
 
@@ -35,7 +35,7 @@ in
       };
       zsh = {
         enable = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         enableCompletion = true;
         syntaxHighlighting.enable = true;
         shellAliases = {
