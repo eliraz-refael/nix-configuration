@@ -40,7 +40,7 @@
           enable = true;
           wayland = true;
         };
-        defaultSession = "none+xmonad";
+        defaultSession = "none+qtile";
       };
       desktopManager = {
         gnome = {
@@ -57,18 +57,6 @@
       windowManager = {
         leftwm.enable = true;
         qtile.enable = true;
-        xmonad = {
-          enable = true;
-          enableContribAndExtras = true;
-          extraPackages = haskellPackages: [
-            haskellPackages.dbus
-            haskellPackages.List
-            haskellPackages.monad-logger
-            haskellPackages.xmonad
-            haskellPackages.xmobar
-            haskellPackages.lsp
-          ];
-        };
       };
       layout = "us,il";
       xkbOptions = "grp:alt_shift_toggle";

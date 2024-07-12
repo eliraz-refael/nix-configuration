@@ -1,11 +1,6 @@
 { config, lib, pkgs, libclang, ... }:
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-  flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
-
-  hyprland-flake = (import flake-compat {
-    src = builtins.fetchTarball "https://github.com/hyprwm/Hyprland/archive/master.tar.gz";
-  }).defaultNix;
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -22,7 +17,6 @@ in {
     fish.enable = true;
     hyprland = {
       enable = true;
-      package = hyprland-flake.packages.${pkgs.system}.hyprland;
     };
   };
 
@@ -80,8 +74,6 @@ in {
     signal-desktop
     slack
     sqlite
-    steam
-    sublime4
     texlive.combined.scheme-full
     unstable.bun
     unstable.bruno
@@ -90,11 +82,8 @@ in {
     unstable.qutebrowser
     unstable.rustc
     unzip
-    waybar
     wget
-    wofi
     xclip
-    xmobar
     yarn
     zip
     zoom-us
