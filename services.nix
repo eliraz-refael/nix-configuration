@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  services.system76-scheduler.enable = true;
+  # services.system76-scheduler.enable = true;
   services.power-profiles-daemon.enable = true;
   security.rtkit.enable = true;
-  sound.enable = true;
+  # sound.enable = true; // deprecated
   services = {
 
     # Enable CUPS to print documents.
@@ -28,38 +28,46 @@
 
     postgresql = {
       enable = true;
+      package = pkgs.postgresql_16;
     };
 
     displayManager.defaultSession = "hyprland";
     libinput.enable = true;
-    xserver = {
-      enable = true;
-      videoDrivers = ["nvidia"];
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
-      };
-      desktopManager = {
-        gnome = {
-          enable = true;
-        };
-      };
-      windowManager = {
-        qtile = {
-          enable = true;
-          backend = "wayland";
-          extraPackages = python3Packages: with python3Packages; [
-            pywlroots
-          ];
-        };
-      };
-      xkb = {
-        layout = "us,il";
-        options = "grp:alt_shift_toggle";
-      };
-    };
+
+	   xserver = {
+	enable = true;
+	displayManager = {
+		gdm = {
+			enable = true;
+			wayland = true;
+		};
+
+
+	};
+desktopManager = {
+	     gnome = {
+	       enable = true;
+	       # wayland = true;
+	     };
+
+};
+
+	   };
+    # displayManager = {
+    #   sddm = {
+    #     enable = true;
+    #     wayland.enable = true;
+    #   };
+    # };
+    # desktopManager = {
+    #   plasma6 = {
+    #     enable = true;
+    #   };
+    #   # gnome = {
+    #   #   enable = true;
+    #   #   wayland = true;
+    #   # };
+    # };
 
   };
 }

@@ -50,12 +50,13 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ( emacs29-pgtk.override { withNativeCompilation = true; } )
+    ( unstable.emacs29-pgtk.override { withNativeCompilation = true; } )
     alacritty
     arandr
     autorandr
     beancount
     bitwarden
+    brave
     brightnessctl
     bitwarden-cli
     cargo
@@ -73,7 +74,7 @@ in {
     elixir
     fd
     feh
-    ffmpeg_5  # Firefox codec for playing audio from places like Tidal
+    ffmpeg_6  # Firefox codec for playing audio from places like Tidal
     firefox-bin
     fzf
     gcc
@@ -117,7 +118,7 @@ in {
     unstable.bun
     unstable.elixir-ls
     unstable.neovim
-    unstable.qutebrowser
+    qutebrowser
     unstable.rustc
     unstable.signal-desktop
     unstable.yarn
@@ -129,10 +130,12 @@ in {
     wofi
     wl-clipboard
     xclip
-    # xmobar
     xwayland
     zip
     zoom-us
+    nodePackages."npm-check-updates"
+    kdePackages.kirigami-addons
+    zellij
   ];
 
 }

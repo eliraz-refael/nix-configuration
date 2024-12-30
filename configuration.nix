@@ -24,10 +24,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1u"
     "openssl-1.1.1v"
-    "electron-20.3.11"
     "openssl-1.1.1w"
-    "electron-24.8.6"
-    "electron-25.9.0"
+    "electron-27.3.11"
   ];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
